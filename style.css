@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap");
+body {
+  background-color: #ffc8dd;
+  font-family: 'M PLUS Rounded 1c';
+  background-image: url(./img/Group\ 9.svg);
+}
+.container {
+  height: 810px;
+  width: 780px;
+  margin: 40px auto;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border: 5px solid #bde0fe;
+}
+button {
+  width: 208px;
+  height: 56px;
+  border-radius: 16px;
+  background: #ffafcc;
+  color: #fff;
+  font-family: 'M PLUS Rounded 1c';
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+}
+.botao {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.foto {
+  
+  text-align: center; 
+  margin-top: 20%;
+  
+}
+.foto img {
+  width: 300PX;
+  height: 300px;
+  border-radius: 100%; 
+  border: 3px solid black;
+}
+
+.message {
+  display: inline-block; /* Alterado para inline-block */
+  padding: 10px;
+  margin: 8px;
+  font-family: 'M PLUS Rounded 1c';
+  color: whitesmoke;
+  clear: both; /* Limpa o float para evitar que mensagens subsequentes se sobreponham */
+}
+
+.user {
+  float: right; /* Alinha as mensagens de usuário à direita */
+  background-color: #537DED; /* Fundo azul para mensagens de usuário */
+  border-radius: 5px;
+  margin-left: 30px; 
+  padding: 10px;
+  margin: 8px;
+  font-family: 'M PLUS Rounded 1c';
+  
+  font-size: 18px;/* Adicione um espaço entre a mensagem e a borda direita */
+}
+
+.amor {
+  float: left; /* Alinha as mensagens de amor à esquerda */
+  background-color: #FC74A6; /* Fundo rosa para mensagens de amor */
+  border-radius: 5px;
+  font-size: 18px;
+  margin-right: 30px; /* Adicione um espaço entre a mensagem e a borda esquerda */
+}
+#chat {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Certifica-se de que a div de chat ocupa toda a altura da div container */
+}
+
+#messages {
+  flex-grow: 1; /* Faz com que a div de mensagens ocupe o espaço disponível */
+  overflow-y: auto; /* Adiciona uma barra de rolagem vertical se as mensagens forem muito longas */
+  padding: 10px; /* Adiciona algum espaço interno para a div de mensagens */
+}
+
+.mensagem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  margin: 5px;
+  background-color: transparent; /* Remove o fundo da div de mensagem */
+}
+
+#input {
+  flex-grow: 1; /* Faz com que o campo de entrada de texto ocupe o espaço restante */
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px; /* Adiciona um espaço entre o campo de entrada e o botão */
+}
+
+#send-button {
+  background-color: #74FC7E;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.message.amor {
+  background-color: #f36bff; /* Fundo rosa para mensagens de amor */
+  border-radius: 5px;
+  margin-right: 200px; /* Alinhar à esquerda com margem */
+  margin-left: 60px;
+  padding: 10px;
+  position: relative;
+}
+
+.message.amor::before {
+  content: '';
+  background-image: url('rosto.png'); /* Substitua 'caminho-da-imagem.jpg' pelo caminho da imagem desejada */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 55px; /* Largura da imagem */
+  height: 55px; /* Altura da imagem */
+  
+  position: absolute;
+  top: 50%; /* Alinhar a imagem verticalmente ao centro */
+  left: -60px; /* Posicionar a imagem à esquerda do texto */
+  transform: translateY(-50%); /* Ajustar a posição vertical da imagem */
+  border-radius: 50%; /* Tornar a imagem redonda */
+  margin-right: 10px; /* Adicionar espaço entre a imagem e o texto */
+}
