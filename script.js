@@ -2,7 +2,7 @@
 
 document.getElementById('send-button').addEventListener('click', sendMessage);
 
-document.getElementById('input').addEventListener('keypress', function(event) {
+document.getElementById('inputText').addEventListener('keypress', function(event) {
     if (event.key === 'Enter') {
         sendMessage();
     }
@@ -11,8 +11,8 @@ document.getElementById('input').addEventListener('keypress', function(event) {
 var chatHistory = [];
 
 function sendMessage() {
-    var message = document.getElementById('input').value;
-    document.getElementById('input').value = '';
+    var message = document.getElementById('inputText').value;
+    document.getElementById('inputText').value = '';
     var messages = document.getElementById('messages');
     messages.innerHTML += '<p class="message user"> ' + message + '</p>';
     chatHistory.push({'role': 'user', 'content': message});
