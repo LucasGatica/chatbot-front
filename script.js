@@ -38,7 +38,7 @@ function askGpt(message) {
         }
     };
 
-    axios.post('http://localhost:9099/v1/chatbot/send-message', data, config)
+    axios.post('http://localhost:8088/v1/webnamoro/send-message', data, config)
         .then((response) => {
             var messages = document.getElementById('messages');
             var answer = response.data['choices'][0]['message']['content'];
